@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/main.css'%}">
+</head>
+<script src="https://kit.fontawesome.com/0d2f763e27.js" crossorigin="anonymous"></script>
+<body>
+    <aside>
+        <img scr="{% static 'main/img/devka.jpg'%}" alt="Лого">
+        <span class="logo">Krutaya devka</span>
+        <h3>Navigation</h3>
+        <ul>
+            <a href="{% url 'home' %}"></a><li><i class="fas fa-home"></i>Home</li></a>
+            <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i>About us</li></a>
+            <a href=""><li><i class="fas fa-file-contract"></i>Contacts</li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
