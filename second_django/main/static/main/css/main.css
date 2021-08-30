@@ -50,3 +50,18 @@ main .feature {
 
 main .feature h1{ font-size: 50px;}
 main .feature p{ max-width: 400px; margin: 20px auto}
+/* НЕ РАБОТАЮТ СТИЛИ ДЛЯ НОВОСТЕЙ
+/*.alert-warning{*/
+/*    color: #4d4d4d;*/
+/*    float: left;*/
+/*    clear: both;*/
+/*    width: 400px;*/
+/*    margin: 20px 34%;*/
+/*    text-align: left;*/
+/*}*/
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}

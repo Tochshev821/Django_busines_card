@@ -1,14 +1,25 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Главная страница{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
     <div class="feature">
-        <h1>Главная страница</h1>
+        <h1>{{ title }}</h1>
         <p>Not sure what you're going to do with love this icon now you've found it? Check out our guide on getting started.
             Or deep dive into how to use a specific styling trick or method in our docs.
         </p>
-        <button class="btn btn-warning">На страницу про нас</button>
+        <button class="btn btn-warning">{% filter upper %}На страницу про нас{% endfilter %}</button>
+
+        {% for el in values %}
+            {% if el == 'Hello' %}
+                {% filter upper %}
+                    <p>{{el|upper}}</p>
+                {% endfilter %}
+            {% endif %}
+        {% endfor%}
+        {% for el in obj%}
+            <p>{{el}}</p>
+        {% endfor%}
     </div>
 
     {% include 'main/test.html' %}
